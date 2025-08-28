@@ -40,10 +40,12 @@ header a {
   text-decoration: none;
   margin: 0 10px;
 }
+
 .trigger-drop {
-    float: right;
-    margin-right: -30px;
+  float: right;
+  margin-right: -30px;
 }
+
 /* MENU - LOGO PO LEWEJ, DROPDOWN PO PRAWEJ */
 nav {
   position: fixed;
@@ -56,6 +58,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
 nav .logo {
@@ -74,23 +77,28 @@ nav .logo span {
   font-size: 13pt;
 }
 
-nav .logo:hover {
-  background: #ccccff;
+/* MENU BARDZIEJ PO PRAWEJ - POPRAWKI */
+nav .links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
-/* MENU NA PRAWO - DROPDOWN */
-nav .links {
-  float: right;
-  margin-right: 20px;
-  position: relative;
+nav .links > ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 nav .links li {
-
   list-style: none;
   position: relative;
-  margin: 10px 5px;
+  margin: 0 0 0 15px;
   display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 nav .links li > a {
@@ -103,8 +111,6 @@ nav .links li > a {
 }
 
 nav .links li > a:hover {
-  color: #ffffff;
-  background: #333366;
   border-radius: 2px;
 }
 
@@ -116,7 +122,7 @@ nav .links li > a .arrow {
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 35%;
+  top: 40%;
   text-align: center;
   right: 10px;
   border-width: 5px 5px 0 5px;
@@ -133,16 +139,16 @@ nav .links li > a .arrow:after {
   height: 15px;
 }
 
-/* DROPDOWN MA BYĆ WYŚWIETLANE PO PRAWEJ */
+/* DROPDOWN BARDZIEJ PO PRAWEJ */
 nav .links li ul {
   position: absolute;
-  right: 0;
+  right: -10px;
+  top: 100%;
   margin: 0;
-  background: #ffffff;
   border-radius: 2px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   display: none;
   min-width: 160px;
+  flex-direction: column;
 }
 
 nav .links li ul > li {
@@ -152,15 +158,6 @@ nav .links li ul > li {
   padding: 0 10px;
   margin: 0;
   width: 100%;
-}
-
-nav .links li ul > li:hover {
-  background: #ccccff;
-}
-
-nav .links li ul > li:hover > a {
-  background: #ccccff;
-  color: #ffffff;
 }
 
 nav .links li:hover > ul {
