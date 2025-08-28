@@ -43,7 +43,7 @@ header a {
 
 .trigger-drop {
   float: right;
-  margin-right: -30px;
+  margin-right: -10px;
 }
 
 /* MENU - LOGO PO LEWEJ, DROPDOWN PO PRAWEJ */
@@ -62,12 +62,11 @@ nav {
 }
 
 nav .logo {
-    margin-top: 10px;
-  margin-left: 0px;
+ margin-top:5px;
+  margin-left: -10px;
   height: 50px;
-  line-height: 50px;
-  font-size: 22px;
-  font-weight: 900;
+
+
 
 }
 /* MENU BARDZIEJ PO PRAWEJ - POPRAWKI */
@@ -329,5 +328,4 @@ footer {
 footer a {
   margin: 0 10px;
   color: #c1018c;
-
 }
