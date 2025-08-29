@@ -59,5 +59,40 @@
     <a href="regulamin.html">Regulamin</a>
     <p>&copy; 2025 New Novello Aesthetic. Wszelkie prawa zastrzeżone.</p>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuItems = document.querySelectorAll('nav .links li > a[class^="trigger-"]');
+  
+  menuItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parentLi = this.parentElement;
+      
+      // Zamknij wszystkie inne otwarte menu
+      document.querySelectorAll('nav .links li').forEach(li => {
+        if (li !== parentLi && li.classList.contains('active')) {
+          li.classList.remove('active');
+          const dropdown = li.querySelector('ul');
+          if (dropdown) {
+            dropdown.classList.add('hidden');
+          }
+        }
+      });
+      
+      // Przełącz aktualne menu
+      parentLi.classList.toggle('active');
+      const dropdown = parentLi.querySelector('ul');
+      
+      if (dropdown) {
+        if (parentLi.classList.contains('active')) {
+          dropdown.classList.remove('hidden');
+        } else {
+          dropdown.classList.add('hidden');
+        }
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>

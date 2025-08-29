@@ -86,6 +86,7 @@ nav .links li > a {
   line-height: 30px;
   height: 30px;
   color: #000000;
+  cursor: pointer;
 }
 
 nav .links li > a:hover {
@@ -106,6 +107,7 @@ nav .links li > a .arrow {
   border-width: 5px 5px 0 5px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.3) transparent;
+  transition: transform 0.3s ease;
 }
 
 nav .links li > a .arrow:after {
@@ -138,10 +140,18 @@ nav .links li ul > li {
   width: 100%;
 }
 
-nav .links li:hover > ul {
+/* Zmiana: usunięto hover i dodano klasę active */
+nav .links li.active > ul {
   display: block;
   animation: fadeInRight 0.3s ease;
   -webkit-animation: fadeInRight 0.3s ease;
+}
+
+/* Dodano klasę dla zwiniętego menu */
+nav .links li ul.hidden {
+  display: none;
+  animation: fadeOutRight 0.3s ease;
+  -webkit-animation: fadeOutRight 0.3s ease;
 }
 
 /* Animacja dla dropdown od prawej */
@@ -154,6 +164,23 @@ nav .links li:hover > ul {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Nowa animacja dla znikania menu */
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(30%, 0, 0);
+  }
+}
+
+/* Strzałka obrócona gdy menu jest otwarte */
+nav .links li.active > a .arrow {
+  transform: rotate(180deg);
 }
 .content {
   margin: auto;
