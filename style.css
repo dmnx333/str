@@ -2,7 +2,6 @@
   font-family: 'Times New Roman', Times, serif;
   max-width: 100%;
   max-height: 100%;
-  box-sizing: border-box;
 }
 
 html {
@@ -12,18 +11,8 @@ html {
 body {
   background-color: #f1eded;
   min-height: 100%;
-  color: #222222;
-  line-height: normal;
-  font-size: 16px;
 }
 
-a, a:hover {
-  color: #333366;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* HEADER */
 header {
   width: 100%;
   background-color: #c2c2c2;
@@ -34,19 +23,6 @@ header {
   font-size: larger;
   position: relative;
 }
-
-header a {
-  color: black;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.trigger-drop {
-  float: right;
-  margin-right: -10px;
-}
-
-/* MENU - LOGO PO LEWEJ, DROPDOWN PO PRAWEJ */
 nav {
   position: fixed;
   left: 0;
@@ -59,6 +35,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+}
+
+.trigger-drop {
+  float: right;
+  margin-right: -10px;
 }
 
 nav .logo {
@@ -169,14 +150,18 @@ nav .links li:hover > ul {
     transform: none;
   }
 }
-
-/* RESZTA KODU */
 .content {
   margin: auto;
-  margin-top: 70px;
+  margin-top: 20pt;
   width: 90%;
   height: 100%;
   margin-bottom: 30px;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 .text {
@@ -208,7 +193,6 @@ nav .links li:hover > ul {
   cursor: pointer;
   border: 1px solid #c2c2c2;
   border-radius: 10px;
-  background: white;
 }
 
 .top button:hover {
@@ -220,15 +204,17 @@ nav .links li:hover > ul {
   position: relative;
   width: 100%;
   max-width: 1400px;
+  /* większy na dużych ekranach */
   height: 500px;
+  /* stała wysokość na komputerze */
   margin: 40px auto;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .top img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -240,8 +226,11 @@ nav .links li:hover > ul {
 .links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  /* zawija do nowej linii na małych ekranach */
   justify-content: center;
+  /* wyśrodkowanie banerów */
   gap: 15px;
+  /* odstęp między banerami */
   margin-top: 20px;
 }
 
@@ -256,7 +245,6 @@ nav .links li:hover > ul {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
-  margin: 0 auto;
 }
 
 .baner img {
@@ -270,6 +258,7 @@ nav .links li:hover > ul {
 
 .baner p {
   margin: 0;
+  /* usuwa domyślny margines góra/dół */
   font-size: 0.95rem;
 }
 
@@ -282,33 +271,16 @@ nav .links li:hover > ul {
     height: 300px;
   }
 
-  .links {
-    grid-template-columns: repeat(2, 1fr);
+  #baner {
+    margin-bottom: 10px;
+    line-height: normal;
     gap: 10px;
   }
 
   .text {
     font-size: small;
     left: 5%;
-    right: auto;
     max-width: 90%;
-    text-align: center;
-  }
-
-  nav {
-    min-width: unset;
-    height: auto;
-    position: relative;
-  }
-  
-  nav .links {
-    float: none;
-    margin-right: 0;
-    text-align: center;
-  }
-  
-  .content {
-    margin-top: 20px;
   }
 }
 
