@@ -8,14 +8,22 @@
 </head>
 <body>
      <header >
-        <a href="kontakt.html">Kontakt</a>
-        <a href="cennik.html">Cennik</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="oferta.html">Oferta</a>
-        <a href="onas.html">O nas</a>
-        <a href="szkolenia.html">Szkolenia</a>
-        <a href="index.html">Strona Głowna</a>
-        <a href="blog.html">Blog</a>
+<nav id="navigation">
+  <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+  <ul class="links">
+    <li class="dropdown"><a href="#" class="trigger-drop">Menu</a>
+      <ul class="drop">
+        <li><a href="onas.html">O nas</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="szkolenia.html">Szkolenia</a></li>
+        <li><a href="cennik.html">Cennik</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </header>
     <div class="dial">
         <h1>Lifting nici – naturalne odmłodzenie bez skalpela</h1>
@@ -50,5 +58,40 @@
     <a href="regulamin.html">Regulamin</a>
     <p>&copy; 2025 New Novello Aesthetic. Wszelkie prawa zastrzeżone.</p>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuItems = document.querySelectorAll('nav .links li > a[class^="trigger-"]');
+  
+  menuItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const parentLi = this.parentElement;
+      
+      // Zamknij wszystkie inne otwarte menu
+      document.querySelectorAll('nav .links li').forEach(li => {
+        if (li !== parentLi && li.classList.contains('active')) {
+          li.classList.remove('active');
+          const dropdown = li.querySelector('ul');
+          if (dropdown) {
+            dropdown.classList.add('hidden');
+          }
+        }
+      });
+      
+      // Przełącz aktualne menu
+      parentLi.classList.toggle('active');
+      const dropdown = parentLi.querySelector('ul');
+      
+      if (dropdown) {
+        if (parentLi.classList.contains('active')) {
+          dropdown.classList.remove('hidden');
+        } else {
+          dropdown.classList.add('hidden');
+        }
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
