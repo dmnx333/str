@@ -27,6 +27,7 @@ nav {
   height: 50px;
   z-index: 1000;
   min-width: 580px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +64,7 @@ nav .links > ul {
 
 nav .links li {
   list-style: none;
-  position: absolute;
+  position: relative;
   margin: 0 0 0 15px;
   display: inline-block;
   padding-top: 10px;
@@ -114,14 +115,12 @@ nav .links li > a .arrow:after {
 nav .links li ul {
   position: absolute;
   right: 0;
-  left: auto;
   top: 100%;
   margin: 0;
   border-radius: 2px;
   display: none;
   min-width: 160px;
   flex-direction: column;
-  float: left;
 }
 
 nav .links li ul > li {
