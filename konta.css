@@ -137,6 +137,9 @@ nav .links li.active > ul {
   animation: fadeInRight 0.3s ease;
   -webkit-animation: fadeInRight 0.3s ease;
 }
+nav .links li {
+  position: relative; /* ← kluczowe */
+}
 
 /* Dodano klasę dla zwiniętego menu */
 nav .links li ul.hidden {
