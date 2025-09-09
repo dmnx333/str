@@ -63,7 +63,7 @@ nav .links > ul {
 
 nav .links li {
   list-style: none;
-  position: relative;
+  position: absolute;
   margin: 0 0 0 15px;
   display: inline-block;
   padding-top: 10px;
@@ -136,9 +136,6 @@ nav .links li.active > ul {
   display: block;
   animation: fadeInRight 0.3s ease;
   -webkit-animation: fadeInRight 0.3s ease;
-}
-nav .links li {
-  position: relative; /* ← kluczowe */
 }
 
 /* Dodano klasę dla zwiniętego menu */
