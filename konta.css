@@ -15,7 +15,9 @@ header {
   position: relative;
 }
 header a {
+  color: black;
   text-decoration: none;
+  margin: 0 10px;
 }
 nav {
   position: sticky;
@@ -188,12 +190,11 @@ button {
 }
 
 body {
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-background-color: #f1eded;
-    background-size: cover;
-    min-height: 100%;
+  background-color: #f1eded;
+  min-height: 100%;
+    color: #222222;
+  line-height: normal;
+  font-size: 16px;
 }
 html {
   height: 100%;
