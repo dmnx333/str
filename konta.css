@@ -114,12 +114,14 @@ nav .links li > a .arrow:after {
 nav .links li ul {
   position: absolute;
   right: 0;
+  left: auto;
   top: 100%;
   margin: 0;
   border-radius: 2px;
   display: none;
   min-width: 160px;
   flex-direction: column;
+  float: left;
 }
 
 nav .links li ul > li {
