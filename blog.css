@@ -216,7 +216,7 @@ margin: 0 10px;
 }
 @media (max-width: 768px) {
  .title {
-  line-height: 10px;
+  line-height: 20px;
  }
 
   .text {
