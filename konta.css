@@ -1,9 +1,22 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-      max-width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 100%;
   max-height: 100%;
-      box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #f1eded;
+  min-height: 100%;
+    color: #222222;
+  line-height: normal;
+  font-size: 16px;
+}
+
 header {
   width: 100%;
   background-color: #c2c2c2;
@@ -13,11 +26,7 @@ header {
   padding: 10px;
   font-size: larger;
   position: relative;
-}
-header a {
-  color: black;
-  text-decoration: none;
-  margin: 0 10px;
+
 }
 nav {
   position: sticky;
@@ -27,7 +36,6 @@ nav {
   height: 50px;
   z-index: 1000;
   min-width: 580px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +44,7 @@ nav {
 
 .trigger-drop {
   float: right;
-
+  margin-right: -10px;
 }
 
 nav .logo {
@@ -114,7 +122,7 @@ nav .links li > a .arrow:after {
 /* DROPDOWN BARDZIEJ PO PRAWEJ */
 nav .links li ul {
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 100%;
   margin: 0;
   border-radius: 2px;
@@ -174,33 +182,12 @@ nav .links li ul.hidden {
 nav .links li.active > a .arrow {
   transform: rotate(180deg);
 }
-body,
-h1,
-h2,
-p,
-ul,
-li,
-form,
-input,
-textarea,
-button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  min-height: 100%;
-}
 
-body {
-  background-color: #f1eded;
-  min-height: 100%;
-    color: #222222;
-  line-height: normal;
-  font-size: 16px;
+header a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
 }
-html {
-  height: 100%;
-}
-
 .content {
     padding: 2rem;
     max-width: 800px;
