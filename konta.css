@@ -225,12 +225,14 @@ html {
 .contact-list {
     padding: 2rem;
     max-width: 800px;
-    margin: 0 auto;
+
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
     margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
 
 }
 
@@ -249,7 +251,8 @@ a {
     margin-top: 5%;
     text-align: center;
     line-height: 35px;
-    
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 h2 {
