@@ -261,14 +261,6 @@ margin: 0 10px;
   color: #c1018c;
 }
 @media (max-width: 768px) {
-  .top {
-    height: 300px;
-  }
-
-  .links {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
 
   .text {
     font-size: small;
@@ -294,4 +286,5 @@ margin: 0 10px;
     margin-top: 20px;
   }
 }
+
 
