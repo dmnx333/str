@@ -126,6 +126,7 @@ nav .links li ul > li {
   padding: 0 10px;
   margin: 0;
   width: 100%;
+      background-color: #c2c2c2;
 }
 
 /* Zmiana: usunięto hover i dodano klasę active */
@@ -177,6 +178,8 @@ background-color: #f1eded;
 }
 .all   {
     margin-bottom: 30px;
+    display: block;
+    justify-content: center;
 }
 html {
   height: 100%;

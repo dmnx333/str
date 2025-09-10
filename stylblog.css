@@ -132,6 +132,7 @@ nav .links li ul {
   display: none;
   min-width: 160px;
   flex-direction: column;
+
 }
 
 nav .links li ul > li {
@@ -141,6 +142,7 @@ nav .links li ul > li {
   padding: 0 10px;
   margin: 0;
   width: 100%;
+      background-color: #c2c2c2;
 }
 
 /* Zmiana: usunięto hover i dodano klasę active */
